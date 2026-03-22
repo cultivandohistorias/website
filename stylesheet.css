@@ -1,0 +1,262 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+::selection {
+	background: #f5f5f5;
+}
+
+body {
+	font-family: 'Baker Signet BT Web', serif;
+	background: #ffff00;
+	color: #000;
+	line-height: 1.6;
+}
+
+/* NAVBAR */
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: #ffffff;
+	z-index: 1000;
+}
+
+.nav {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	padding: 5px 20px;
+}
+
+.nav-left {
+	text-transform: uppercase;
+	font-family: helvetica, sans-serif;
+}
+
+.nav-center {
+	font-family: 'Space Mono', monospace;
+	font-size: 11.5px;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+}
+
+.nav-center a {
+	text-decoration: none;
+	color: black;
+}
+
+.nav-right {
+	text-align: right;
+}
+
+.nav-right a {
+	text-decoration: none;
+	color: black;
+}
+
+/* HAMBURGER */
+.hamburger {
+	display: none;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.mobile-menu {
+	display: none;
+	flex-direction: column;
+	background: #ffffff;
+	padding: 0px 20px;
+}
+
+.mobile-menu a {
+	padding: 10px 0;
+	text-decoration: none;
+	color: black;
+}
+
+/* CONTENT */
+main {
+	padding: 55px 20px 20px 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+section {
+	margin-top: 15px;
+	margin-bottom: 60px;
+}
+
+.image-block img {
+	width: 100%;
+	display: block;
+}
+
+.image-block.hero img {
+	width: 75%;
+	display: block;
+}
+
+.caption {
+	font-size: 14px;
+	margin-top: 5px;
+	font-style: italic;
+}
+
+.text {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	line-height: 25px;
+	font-size: 25px;
+}
+
+/* FOOTER */
+footer {
+	padding: 20px;
+	background: #ddd;
+	text-align: center;
+	margin-top: 40px;
+}
+
+footer a {
+	margin: 0 10px;
+	color: black;
+	text-decoration: none;
+}
+
+#intro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#intro img {
+	width: 50%;
+}
+
+#intro p:first-child {
+	margin-bottom: 15px;
+}
+
+#intro p:last-child {
+	margin-top: 15px;
+}
+
+#intro p {
+	font-size: 25px;
+	line-height: 25px;
+	text-align: center;
+	width: 75%;
+}
+
+.grid-2 {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+}
+
+.grid-3 {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
+}
+
+.grid-2 img,
+.grid-3 img {
+	width: 100%;
+	height: auto;
+}
+
+#experiencia {
+    border-top: 1px solid black;
+    padding-top: 15px;
+}
+
+.cv-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+.cv-item h3 {
+	margin-bottom: 5px;
+}
+
+.cv-item p {
+	margin-bottom: 8px;
+	font-size: 16px;
+}
+
+.masonry-gallery {
+  column-count: 4;
+  column-gap: 10px;
+}
+
+.masonry-gallery img {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+/* Mobile: 2 columns */
+@media (max-width: 768px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+/* Mobile: single column */
+@media (max-width: 768px) {
+	.cv-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+	.nav {
+		grid-template-columns: auto auto;
+	}
+
+	.nav-center,
+	.nav-right {
+		display: none;
+	}
+
+	.hamburger {
+		display: block;
+		text-align: right;
+	}
+
+	.mobile-menu.show {
+		display: flex;
+	}
+}
+
+@font-face {
+	font-family: 'Space Mono';
+	src: url('SpaceMono-Regular.woff2') format('woff2'),
+		url('SpaceMono-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Baker Signet BT Web';
+	src: url('BakerSignetBTWeb.woff2') format('woff2'),
+		url('BakerSignetBTWeb.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
